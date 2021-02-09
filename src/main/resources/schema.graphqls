@@ -1,0 +1,35 @@
+type Query {
+  bookById(id: ID): Book
+  loginById(id: ID): Login
+  loginByLogin(login: String    ): Login
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+
+type Login {
+  id: ID
+  login: String
+  actif: Boolean
+  expired: Boolean
+  utilisateur: Utilisateur
+}
+
+type Utilisateur {
+  id: ID
+  login: String
+  nom: String
+  prenom: String
+  email: String
+  numeroCp: String
+}
